@@ -13,7 +13,7 @@ The app (InstaLoad.exe) was created using cx_freeze. If you just want to use the
 
 Caveat:
 
-Since this program doesn/t use the Instagram API, and but instead uses Selenium, it just automates the web browsing. This process is slow since Instagram requires a lot of JS and Ajax to be loaded. This program was tested and got an average download rate of 10-12 posts per min. The benefit of this script is that it can run in the background, so you can minimize and leave it running in the background.
+Since this program doesn't use the Instagram API, but instead uses Selenium, it just automates the web browsing. This process is slow since Instagram requires a lot of JS and Ajax to be loaded. This program was tested and got an average download rate of 10-12 posts per min. The benefit of this script is that it can run in the background, so you can minimize and leave it running in the background.
 
 Disclaimer:
 
