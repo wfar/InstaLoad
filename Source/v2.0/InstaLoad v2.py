@@ -19,12 +19,7 @@ def main():
     #Scraping process.
     driver = webdriver.PhantomJS(executable_path = config.pjs_path)
     
-    if len(sys.argv) == 1:
-    #Runs without command line args or when .exe clicked.
-        logged_in = Scraper.get_account_info(driver)
-        username, userpage = Scraper.get_username()
-        
-    elif len(sys.argv) == 2:
+    if len(sys.argv) == 2:
     #User does not want to log in to account but entered username arg.
         logged_in = False
         url = 'https://www.instagram.com/'
@@ -50,10 +45,9 @@ def main():
         userpage = url + username
 
     else:
-    #Incorrect number of arguments given.
-        print('Incorrect number of arguements given. Please try again.')
-        time.sleep(1)
-        sys.exit()
+    #Runs without command line args, incorrect number of args, or when .exe clicked.
+        logged_in = Scraper.get_account_info(driver)
+        username, userpage = Scraper.get_username()
         
     scrape = Scraper(username, userpage, driver)
     scrape.run()
